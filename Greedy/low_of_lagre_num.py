@@ -9,8 +9,10 @@ li = input().split()
 intList = [int(x) for x in li] # ListComprehension
 
 intList.sort(reverse=True) # list 본체를 정렬
+
 count = 0
 total = 0
+
 for i in range(m):
     if(count <k):
         total += intList[0]
