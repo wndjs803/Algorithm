@@ -31,5 +31,4 @@ def solution(gems):
             if check[gems[lt]] == 0:
                 del check[gems[lt]]
             lt += 1
-
     return answer
