@@ -22,6 +22,7 @@ class Solution {
                     
                     answers.add(Arrays.asList(nums[i], nums[left], nums[right]));
                     
+                    // 중복 체크를 하는 이유는 인덱스는 달라도 같은 원소를 포함한 답이 중복으로 나올 수 있기 때문에
                     while(left < right && nums[left] == nums[left+1])
                         left += 1;
                     while(left < right && nums[right] == nums[right-1])
