@@ -1,15 +1,16 @@
 def solution(n, lost, reserve):
-    _lost = [x for x in lost if x not in reserve]
-    _reserve = [x for x in reserve if x not in lost]
-    _lost.sort()
-    _reserve.sort()
-    for num in _reserve:
-        minus = num - 1
-        flus = num + 1
-        if minus in _lost:
-            _lost.remove(minus)
-        elif flus in _lost:
-            _lost.remove(flus)
+    new_lost = [l for l in lost if l not in reserve]
+    new_reserve = [r for r in reserve if r not in lost]
     
-    answer = n - len(_lost)
-    return answer
+    new_lost.sort()
+    new_reserve.sort()
+    
+    for value in new_reserve:
+        if value - 1 in new_lost:
+            new_lost.remove(value - 1)
+            continue
+        if value + 1 in new_lost:
+            new_lost.remove(value + 1)
+            continue
+            
+    return n - len(new_lost)
