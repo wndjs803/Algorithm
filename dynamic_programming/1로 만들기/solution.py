@@ -1,3 +1,5 @@
+# 이것이 코딩테스트다 with python
+
 x = int(input())
 
 d = [0] * 30001
