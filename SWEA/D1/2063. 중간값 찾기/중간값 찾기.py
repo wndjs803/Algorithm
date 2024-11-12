@@ -1,0 +1,5 @@
+n = int(input())
+numbers = list(map(int, input().split()))
+numbers.sort()
+index = int(n / 2)
+print(numbers[index])
