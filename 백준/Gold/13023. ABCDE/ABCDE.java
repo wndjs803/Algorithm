@@ -13,6 +13,7 @@ public class Main {
         int node = Integer.parseInt(st.nextToken());
         int edge = Integer.parseInt(st.nextToken());
 
+        check = new boolean[node];
         graph = new ArrayList[node];
 
         for (int i = 0; i < node; i++) {
@@ -29,7 +30,6 @@ public class Main {
         }
 
         for (int i = 0; i < node; i++) {
-            check = new boolean[node];
             depth = 0;
             dfs(i, depth);
             
